@@ -17,8 +17,8 @@ const App = () => {
   ];
 
   useEffect(() => {
-    document.title = 'Your Roll Number';
-  }, []);
+    document.title = apiResponse ? apiResponse.roll_number : 'Your Roll Number';
+  }, [apiResponse]);
 
   const handleInputChange = (e) => {
     setJsonInput(e.target.value);
